@@ -430,6 +430,29 @@ body {
 }
 .sticky-inner .sf-btn:hover { background: var(--cta-hover); }
 
+/* — Article Image — */
+.article-img {
+  margin: 32px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.article-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.article-img .img-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.66rem;
+  color: var(--ink-muted);
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+  font-style: italic;
+}
+
 /* — Animations — */
 .reveal {
   opacity: 0;
@@ -475,6 +498,11 @@ body {
   <p class="reveal">Families blindsided by timeshare obligations they never agreed to — passed down through contracts written to last <em>forever</em>.</p>
 
   <p class="reveal">And the numbers behind this crisis are staggering.</p>
+
+  <div class="article-img reveal">
+    <img src="img-inheritance.png" alt="A younger woman sitting alone at a dining table, reading legal notices about inherited timeshare debt, with family photos nearby" loading="lazy">
+    <div class="img-caption">Families across the country are receiving maintenance fee demands for timeshare contracts they never signed — inherited from deceased parents and grandparents.</div>
+  </div>
 
   <div class="impact-box reveal">
     <div class="ib-title">⚠ What the Industry Doesn't Want You to Know</div>

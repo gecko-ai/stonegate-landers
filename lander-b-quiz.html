@@ -475,6 +475,29 @@ body {
 }
 .sticky-inner .st-btn:hover { background: var(--green-dark); }
 
+/* — Article Image — */
+.article-img {
+  margin: 32px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.article-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.article-img .img-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  color: var(--ink-muted);
+  padding: 10px 14px;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+  font-style: italic;
+}
+
 /* — Animations — */
 .fade-in {
   opacity: 0;
@@ -525,6 +548,11 @@ body {
   <p class="fade-in">How much will your timeshare cost you over the next 10 years?</p>
 
   <p class="fade-in">The answer is almost certainly more than you expect. And once you see the math, you'll understand why thousands of owners are choosing to walk away — legally.</p>
+
+  <div class="article-img fade-in">
+    <img src="img-fees.png" alt="A stressed homeowner surrounded by rising maintenance fee bills and financial statements" loading="lazy">
+    <div class="img-caption">Maintenance fees increase an average of 8% per year with no cap. Many owners report feeling trapped by costs that now dwarf the original purchase price.</div>
+  </div>
 
   <div class="stat-highlight fade-in">
     <div class="stat-box">

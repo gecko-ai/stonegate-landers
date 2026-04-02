@@ -536,6 +536,28 @@ body {
   .t-grid { gap: 16px; }
 }
 
+/* — Article Image — */
+.article-img {
+  margin: 32px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.article-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.article-img .img-caption {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  padding: 10px 14px;
+  background: #f5f5f3;
+  line-height: 1.5;
+  font-style: italic;
+}
+
 /* — Subtle animations — */
 .fade-in {
   opacity: 0;
@@ -584,6 +606,11 @@ body {
   <p class="fade-in">What we found is genuinely alarming — and every American timeshare owner should know about it.</p>
 
   <p class="fade-in">Behind the glossy brochures lies coercive sales tactics, inescapable contracts, fraudulent exit companies, and — most alarmingly — direct involvement by criminal organizations designated as <strong>Foreign Terrorist Organisations</strong> by the US government.</p>
+
+  <div class="article-img fade-in">
+    <img src="img-distress.png" alt="An elderly couple sitting at their kitchen table overwhelmed by timeshare maintenance fee notices and collection letters" loading="lazy">
+    <div class="img-caption">Thousands of elderly Americans face mounting timeshare fees with no way out. Documented cases show families losing their retirement savings to perpetuity contracts.</div>
+  </div>
 
   <h2 class="fade-in">The Purchase Trap: How Millions Got Locked In</h2>
 
