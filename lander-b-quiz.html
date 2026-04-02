@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeshare Exit Eligibility — Check If You Qualify for Legal Cancellation</title>
+<meta name="description" content="Rising maintenance fees making your timeshare unbearable? Check if your contract qualifies for permanent legal cancellation. Free eligibility check — takes 60 seconds.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Timeshare Exit Eligibility — Check If You Qualify">
+<meta property="og:description" content="Rising fees? Can't use your timeshare? See if you qualify for legal cancellation. Free check — 60 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #111827;
+  --ink-secondary: #374151;
+  --ink-muted: #6b7280;
+  --bg: #f8fafc;
+  --bg-white: #ffffff;
+  --primary: #0e7c47;
+  --primary-dark: #0a6339;
+  --primary-light: #ecfdf5;
+  --primary-glow: rgba(14,124,71,0.12);
+  --blue: #1e40af;
+  --blue-light: #eff6ff;
+  --amber: #d97706;
+  --amber-light: #fffbeb;
+  --border: #e5e7eb;
+  --border-focus: #0e7c47;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--ink); background: var(--bg); }
+
+/* — Header — */
+.header {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.header-trust {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.header-trust .dot { width: 4px; height: 4px; background: var(--border); border-radius: 50%; }
+.header-trust .green { color: var(--primary); font-weight: 700; }
+
+/* — Hero — */
+.hero {
+  background: linear-gradient(160deg, #064e2e 0%, #0e7c47 40%, #10994f 100%);
+  color: #fff;
+  padding: 48px 20px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 40px;
+  background: var(--bg);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+.hero-inner { max-width: 620px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.hero-sub {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* — Quiz Container — */
+.quiz-section { padding: 0 20px; margin-top: -20px; position: relative; z-index: 2; }
+.quiz-card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.quiz-header {
+  background: var(--primary-light);
+  border-bottom: 1px solid rgba(14,124,71,0.1);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quiz-header .qh-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.quiz-header .qh-timer {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Progress bar */
+.progress-wrap { padding: 0 24px; margin-top: 20px; }
+.progress-bar { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; }
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #2ecc71);
+  border-radius: 3px;
+  width: 0%;
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+/* Quiz Steps */
+.quiz-body { padding: 28px 24px 32px; }
+.quiz-step { display: none; }
+.quiz-step.active { display: block; }
+.quiz-step .qs-number {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.quiz-step h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+.quiz-options { display: grid; gap: 10px; }
+.quiz-opt {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  background: var(--bg-white);
+}
+.quiz-opt:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.quiz-opt .opt-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+.quiz-opt:hover .opt-icon { background: var(--primary); color: #fff; transform: scale(1.05); }
+.quiz-opt .opt-label { flex: 1; }
+
+/* Quiz Result */
+.quiz-result { display: none; }
+.quiz-result.active { display: block; }
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-light);
+  border: 1px solid rgba(14,124,71,0.2);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.result-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.result-text {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.result-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(14,124,71,0.3);
+}
+.result-btn:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(14,124,71,0.35); }
+.result-sub {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+/* — Info Sections Below Quiz — */
+.info-section {
+  max-width: 560px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+.info-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.3s;
+}
+.info-card:hover { box-shadow: var(--shadow-md); }
+.info-card .ic-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.info-card .ic-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.info-card .ic-icon.green { background: var(--primary-light); }
+.info-card .ic-icon.blue { background: var(--blue-light); }
+.info-card .ic-icon.amber { background: var(--amber-light); }
+.info-card .ic-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  padding-top: 8px;
+}
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  line-height: 1.7;
+}
+
+/* — Cost Breakdown — */
+.cost-section {
+  max-width: 560px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.cost-card {
+  background: linear-gradient(135deg, #fef9ee 0%, #fef3c7 100%);
+  border: 1px solid rgba(217,119,6,0.2);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+.cost-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(217,119,6,0.12);
+  font-size: 0.9rem;
+}
+.cost-row:last-child { border: none; }
+.cost-row .cr-label { color: var(--ink-secondary); }
+.cost-row .cr-value { font-weight: 700; color: var(--ink); }
+.cost-row.total { padding-top: 16px; margin-top: 4px; border-top: 2px solid rgba(217,119,6,0.3); border-bottom: none; }
+.cost-row.total .cr-label { font-weight: 700; color: var(--ink); }
+.cost-row.total .cr-value { color: #b91c1c; font-size: 1.1rem; }
+
+/* — Testimonials — */
+.test-section {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+.test-section h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.test-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.tc-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 8px; letter-spacing: 1px; }
+.tc-text { font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 10px; }
+.tc-author { font-size: 0.78rem; font-weight: 600; color: var(--ink); }
+.tc-badge { font-size: 0.6rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* — State Grid — */
+.state-section {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.state-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--ink-secondary);
+}
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: 6px;
+}
+.state-pill {
+  display: block;
+  text-align: center;
+  padding: 8px 4px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.state-pill:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
+
+/* — Bottom CTA — */
+.bottom-cta {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.bottom-cta-card {
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  color: #fff;
+}
+.bottom-cta-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.bottom-cta-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.bottom-cta-card a {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #fff;
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.bottom-cta-card a:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
+/* — Footer — */
+.footer {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 24px 20px 100px;
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  text-align: center;
+}
+.footer a { color: var(--ink-muted); }
+
+/* — Sticky CTA — */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px;
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+}
+.sticky-bar.show { transform: translateY(0); }
+.sticky-bar-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.sticky-bar .sb-text { flex: 1; font-size: 0.78rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.sticky-bar .sb-text small { display: block; font-size: 0.65rem; font-weight: 400; color: var(--ink-muted); }
+.sticky-bar .sb-btn {
+  padding: 12px 20px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.sticky-bar .sb-btn:hover { background: var(--primary-dark); }
+
+@media (max-width: 480px) {
+  .hero { padding: 36px 16px 44px; }
+  .quiz-body { padding: 24px 18px 28px; }
+  .quiz-opt { padding: 14px 14px; font-size: 0.9rem; }
+  .quiz-opt .opt-icon { width: 36px; height: 36px; font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-trust">
+    <span class="green">✓ A+ BBB Rated</span>
+    <span class="dot"></span>
+    <span>95%+ Success Rate</span>
+    <span class="dot"></span>
+    <span>Free Consultation</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Free Eligibility Check · 60 Seconds</div>
+    <h1>Your Timeshare Maintenance Fees Will Never Stop Rising. There Is a Legal Way Out.</h1>
+    <p class="hero-sub">Thousands of owners are legally canceling contracts they were told were "permanent." Check if you qualify — it takes less than a minute.</p>
+  </div>
+</section>
+
+<!-- Quiz -->
+<section class="quiz-section">
+  <div class="quiz-card">
+    <div class="quiz-header">
+      <span class="qh-title">Eligibility Check</span>
+      <span class="qh-timer">⏱ Takes ~60 seconds</span>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label">
+        <span id="progressText">Question 1 of 4</span>
+        <span id="progressPct">0%</span>
+      </div>
+    </div>
+
+    <div class="quiz-body">
+      <!-- Step 1 -->
+      <div class="quiz-step active" data-step="1">
+        <div class="qs-number">Question 1 of 4</div>
+        <h2>Were you pressured or misled during your timeshare purchase?</h2>
+        <div class="quiz-options">
+          <div class="quiz-opt" onclick="nextStep(2)">
+            <div class="opt-icon">✓</div>
+            <div class="opt-label">Yes, I felt pressured or misled</div>
+          </div>
+          <div class="quiz-opt" onclick="nextStep(2)">
+            <div class="opt-icon">—</div>
+            <div class="opt-label">I'm not sure</div>
+          </div>
+          <div class="quiz-opt" onclick="nextStep(2)">
+            <div class="opt-icon">✕</div>
+            <div class="opt-label">No, I wasn't pressured</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="quiz-step" data-step="2">
+        <div class="qs-number">Question 2 of 4</div>
+        <h2>Are you currently paying annual maintenance fees?</h2>
+        <div class="quiz-options">
+          <div class="quiz-opt" onclick="nextStep(3)">
+            <div class="opt-icon">💰</div>
+            <div class="opt-label">Yes, and they keep going up</div>
+          </div>
+          <div class="quiz-opt" onclick="nextStep(3)">
+            <div class="opt-icon">💰</div>
+            <div class="opt-label">Yes, but they've been stable</div>
+          </div>
+          <div class="quiz-opt" onclick="nextStep(3)">
+            <div class="opt-icon">—</div>
+            <div class="opt-label">No, I stopped paying</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="quiz-step" data-step="3">
+        <div class="qs-number">Question 3 of 4</div>
+        <h2>Has your timeshare become a financial burden you'd like to be free from?</h2>
+        <div class="quiz-options">
+          <div class="quiz-opt" onclick="nextStep(4)">
+            <div class="opt-icon">🔓</div>
+            <div class="opt-label">Yes, I want out completely</div>
+          </div>
+          <div class="quiz-opt" onclick="nextStep(4)">
+            <div class="opt-icon">🤔</div>
+            <div class="opt-label">I'm exploring my options</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="quiz-step" data-step="4">
+        <div class="qs-number">Question 4 of 4</div>
+        <h2>How long have you owned your timeshare?</h2>
+        <div class="quiz-options">
+          <div class="quiz-opt" onclick="showResult()">
+            <div class="opt-icon">📅</div>
+            <div class="opt-label">Less than 1 year</div>
+          </div>
+          <div class="quiz-opt" onclick="showResult()">
+            <div class="opt-icon">📅</div>
+            <div class="opt-label">1–5 years</div>
+          </div>
+          <div class="quiz-opt" onclick="showResult()">
+            <div class="opt-icon">📅</div>
+            <div class="opt-label">5–15 years</div>
+          </div>
+          <div class="quiz-opt" onclick="showResult()">
+            <div class="opt-icon">📅</div>
+            <div class="opt-label">15+ years</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="quiz-result" id="quizResult">
+        <div class="result-badge">✓ Eligibility Confirmed</div>
+        <div class="result-title">Based on Your Answers, You May Qualify for Legal Timeshare Cancellation</div>
+        <p class="result-text">Your situation matches thousands of owners who have successfully exited their timeshare contracts through a legitimate attorney-backed process. The next step is a free, no-obligation consultation to review your specific contract and options.</p>
+        <a href="#" class="result-btn">Get My Free Consultation →</a>
+        <p class="result-sub">Free · No obligation · Takes 5 minutes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Steps -->
+<section class="info-section">
+  <div class="info-card">
+    <div class="ic-header">
+      <div class="ic-icon green">1</div>
+      <div class="ic-title">Free Eligibility Check</div>
+    </div>
+    <p>Answer a few questions to determine if your timeshare contract qualifies for legal cancellation. Takes less than 60 seconds — no personal information required.</p>
+  </div>
+  <div class="info-card">
+    <div class="ic-header">
+      <div class="ic-icon blue">2</div>
+      <div class="ic-title">Free Attorney Consultation</div>
+    </div>
+    <p>If you qualify, a licensed attorney reviews your specific contract and purchase circumstances to identify legal vulnerabilities and consumer protection violations.</p>
+  </div>
+  <div class="info-card">
+    <div class="ic-header">
+      <div class="ic-icon amber">3</div>
+      <div class="ic-title">Legal Challenge & Cancellation</div>
+    </div>
+    <p>Your attorney builds a formal case and negotiates directly with the resort's legal team for a full release from your contract. Most cases resolve within 6–12 months.</p>
+  </div>
+</section>
+
+<!-- Cost Breakdown -->
+<section class="cost-section">
+  <div class="cost-card">
+    <h3>💡 The True Cost of Keeping Your Timeshare</h3>
+    <div class="cost-row">
+      <span class="cr-label">Average maintenance fees (per year)</span>
+      <span class="cr-value">$1,200</span>
+    </div>
+    <div class="cost-row">
+      <span class="cr-label">Average annual increase</span>
+      <span class="cr-value">~8% / year</span>
+    </div>
+    <div class="cost-row">
+      <span class="cr-label">Special assessments (surprise bills)</span>
+      <span class="cr-value">$800–$3,000+</span>
+    </div>
+    <div class="cost-row">
+      <span class="cr-label">Average resale value</span>
+      <span class="cr-value" style="color: #b91c1c;">$1 or less</span>
+    </div>
+    <div class="cost-row total">
+      <span class="cr-label">Cost if you keep it 10 more years</span>
+      <span class="cr-value">$17,000+</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="test-section">
+  <h3>Thousands Have Already Exited Successfully</h3>
+  <div class="test-card">
+    <div class="tc-stars">★★★★★</div>
+    <p class="tc-text">"As retirees, we didn't want to keep paying thousands for a vacation spot we didn't even use. They walked us through the process with kindness and clarity. They're a company you can trust."</p>
+    <div class="tc-author">— Sally L.</div>
+    <div class="tc-badge">BBB Verified</div>
+  </div>
+  <div class="test-card">
+    <div class="tc-stars">★★★★★</div>
+    <p class="tc-text">"We've been acquainted with this company through a friend. We canceled three timeshares — the task was completed within 8 months. I can confidently say it was definitely worth it."</p>
+    <div class="tc-author">— Maria J.</div>
+    <div class="tc-badge">BBB Verified</div>
+  </div>
+  <div class="test-card">
+    <div class="tc-stars">★★★★★</div>
+    <p class="tc-text">"I had a timeshare for 9 years. I never used it and the cost kept rising. I felt depressed and trapped. I saw the ad online and I called. My experience from beginning to end was great."</p>
+    <div class="tc-author">— Carol M.</div>
+    <div class="tc-badge">Verified Client</div>
+  </div>
+</section>
+
+<!-- State Grid -->
+<section class="state-section">
+  <h3>Available in All 50 States — Select Yours</h3>
+  <div class="state-grid" id="stateGrid"></div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="bottom-cta">
+  <div class="bottom-cta-card">
+    <h3>Your Next Maintenance Fee Increase Is Already Scheduled</h3>
+    <p>Every year you wait costs real money. The eligibility check takes 60 seconds, costs nothing, and could be the last step toward finally being free of your timeshare.</p>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Check If I Qualify</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>This page is for informational and advertising purposes. Results described are based on actual client experiences and may not be typical. Individual results will vary based on the specific facts and legal issues of each case. Nothing on this page constitutes legal advice. Eligibility for timeshare exit depends on individual ownership, contract terms, and resort cooperation.</p>
+  <p style="margin-top: 8px;"><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · © 2026</p>
+</footer>
+
+<!-- Sticky Bar -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-inner">
+    <div class="sb-text">Could your timeshare be canceled?<small>Free check · No obligation</small></div>
+    <a href="#" class="sb-btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Check Now</a>
+  </div>
+</div>
+
+<script>
+// Quiz logic
+const totalSteps = 4;
+function nextStep(n) {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.querySelector(`.quiz-step[data-step="${n}"]`).classList.add('active');
+  const pct = ((n - 1) / totalSteps) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `Question ${n} of ${totalSteps}`;
+  document.getElementById('progressPct').textContent = Math.round(pct) + '%';
+}
+function showResult() {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('quizResult').classList.add('active');
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressText').textContent = 'Complete';
+  document.getElementById('progressPct').textContent = '100%';
+}
+
+// State Grid
+const states = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+const grid = document.getElementById('stateGrid');
+states.forEach(s => {
+  const a = document.createElement('a');
+  a.href = '#';
+  a.className = 'state-pill';
+  a.textContent = s;
+  a.onclick = e => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+  grid.appendChild(a);
+});
+
+// Sticky bar
+const bar = document.getElementById('stickyBar');
+window.addEventListener('scroll', () => {
+  bar.classList.toggle('show', window.scrollY / (document.body.scrollHeight - window.innerHeight) > 0.35);
+}, { passive: true });
+</script>
+
+</body>
+</html>
