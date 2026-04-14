@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hidden Cost of Timeshare Ownership — What Resorts Don't Tell You</title>
+  <meta name="description" content="Millions of Americans are trapped in timeshare contracts with rising fees, zero resale value, and no clear exit. Here's what you need to know — and what you can do about it.">
+  <meta property="og:title" content="The Hidden Cost of Timeshare Ownership — What Resorts Don't Tell You">
+  <meta property="og:description" content="Rising fees. No resale value. No exit strategy. Millions of owners are stuck — but qualifying contracts may be eligible for permanent legal cancellation.">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f0;
+      --card: #fff;
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --red: #b71c1c;
+      --red-bright: #e53935;
+      --red-bg: #fff5f5;
+      --blue: #0d47a1;
+      --navy: #0a1929;
+      --gold: #c5960c;
+      --green: #0e7c47;
+      --green-dark: #0a5c35;
+      --green-cta: #1b8a50;
+      --border: #e0e0e0;
+      --max: 680px;
+      --shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      --radius: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ad-label {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+    }
+
+    .top-bar {
+      background: var(--navy);
+      color: #c8d6e5;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: .04em;
+    }
+
+    .article {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    h1 {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: clamp(24px, 5vw, 34px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+    h1 .hl-red { color: var(--red); }
+
+    .byline {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article p {
+      font-size: 17px;
+      margin-bottom: 18px;
+      color: #2a2a2a;
+    }
+    .article p strong { color: var(--ink); }
+
+    h2.section-head {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 32px 0 16px;
+      color: var(--ink);
+    }
+
+    /* -- Stat Strip -- */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 28px 0;
+    }
+    .stat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 10px;
+      text-align: center;
+    }
+    .stat-box .sb-num {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1.2;
+    }
+    .stat-box .sb-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      font-weight: 600;
+    }
+
+    /* -- Alert Box -- */
+    .alert-box {
+      background: #fff8e1;
+      border: 2px solid #f9a825;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin: 28px 0;
+    }
+    .alert-box .ab-head {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: #e65100;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .alert-box p {
+      font-size: 15px;
+      color: #3a3a3a;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .alert-box p strong { color: var(--ink); }
+
+    /* -- Warning Box -- */
+    .warning-box {
+      background: var(--navy);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .warning-box .wb-title {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #ff5252;
+      margin-bottom: 14px;
+    }
+    .warning-box ul { list-style: none; padding: 0; }
+    .warning-box li {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+      color: #d0d0d0;
+      padding: 6px 0 6px 22px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .warning-box li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #ff5252;
+      font-weight: 700;
+    }
+    .warning-box li strong { color: #fff; }
+
+    /* -- Quote Box -- */
+    .quote-box {
+      border-left: 4px solid var(--gold);
+      background: #fafaf5;
+      padding: 18px 20px;
+      margin: 24px 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .quote-box p {
+      font-size: 16px;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .quote-box .qb-attr {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* -- Divider -- */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    /* -- Red Flag List -- */
+    .red-flags {
+      background: var(--red-bg);
+      border: 1px solid #f5c6c6;
+      border-radius: var(--radius);
+      padding: 20px 20px 16px 24px;
+      margin: 24px 0;
+    }
+    .red-flags .rf-title {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .red-flags ul { list-style: none; padding: 0; }
+    .red-flags li {
+      font-size: 15px;
+      padding: 5px 0 5px 24px;
+      position: relative;
+      color: #3a3a3a;
+    }
+    .red-flags li::before {
+      content: '⚠️';
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+    }
+
+    /* -- CTA Block -- */
+    .cta-block {
+      background: linear-gradient(135deg, #0e7c47 0%, #0a5c35 100%);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .cta-block h3 {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--green);
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .cta-trust {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .cta-trust span {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .cta-timer {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 10px;
+    }
+
+    /* -- Inline CTA -- */
+    .inline-cta {
+      display: block;
+      background: var(--green-cta);
+      color: #fff;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 16px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      margin: 28px 0;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+    .inline-cta:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    /* -- Testimonial -- */
+    .testimonial {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin: 20px 0;
+    }
+    .testimonial .stars {
+      color: #d4a300;
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .testimonial p {
+      font-size: 15px;
+      font-style: italic;
+      color: #3a3a3a;
+      margin-bottom: 6px;
+    }
+    .testimonial .t-author {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .testimonial .t-brand {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-top: 4px;
+    }
+
+    /* -- Before/After Image -- */
+    .ba-image {
+      max-width: var(--max);
+      margin: 28px auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .ba-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* -- Trust Bar -- */
+    .trust-bar {
+      max-width: var(--max);
+      margin: 0 auto 28px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding: 14px 20px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .trust-bar span { white-space: nowrap; }
+
+    /* -- Footer -- */
+    .site-footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px 20px 100px;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      color: #888;
+      line-height: 1.6;
+    }
+    .site-footer p { margin-bottom: 7px; }
+
+    /* -- Sticky CTA -- */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(10, 20, 30, 0.97);
+      border-top: 1px solid #2a3a4a;
+      padding: 10px 16px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+    .sticky-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sticky-inner .st-text {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      color: #e53935;
+      text-align: center;
+    }
+    .sticky-inner .st-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .sticky-inner .st-btn:hover { background: var(--green-dark); }
+
+    @media (max-width: 600px) {
+      .stat-strip { gap: 6px; }
+      .stat-box { padding: 12px 6px; }
+      .stat-box .sb-num { font-size: 18px; }
+      .article { padding: 22px 16px 60px; }
+      .cta-block { padding: 22px 14px; }
+      .cta-btn { width: 100%; text-align: center; padding: 14px 20px; }
+      .inline-cta { font-size: 15px; padding: 14px 18px; }
+      .sticky-inner .st-btn { width: 100%; text-align: center; }
+      .trust-bar { gap: 16px; font-size: 11px; }
+    }
+
+    /* -- Review Carousel -- */
+    .review-carousel-section {
+      margin: 32px -20px;
+      overflow: hidden;
+    }
+    .rc-header {
+      text-align: center;
+      padding: 0 20px 16px;
+    }
+    .rc-brand {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .rc-rating {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 14px;
+      color: #d4a300;
+    }
+    .rc-rating span {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .rc-track-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+    .rc-track-wrapper::before,
+    .rc-track-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .rc-track-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg), transparent);
+    }
+    .rc-track-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg), transparent);
+    }
+    .rc-track {
+      display: flex;
+      gap: 14px;
+      animation: scrollReviews 45s linear infinite;
+      width: max-content;
+    }
+    .rc-track:hover { animation-play-state: paused; }
+    @keyframes scrollReviews {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .rc-card {
+      flex: 0 0 280px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .rc-stars {
+      color: #d4a300;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .rc-card p {
+      font-size: 14px;
+      color: #3a3a3a;
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .rc-author {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ad-label">Advertorial</div>
+  <div class="top-bar">Consumer Advisory · April 2026</div>
+
+  <article class="article">
+
+    <h1>5 Reasons Timeshare Owners Are Choosing to <span class="hl-red">Exit — Permanently</span></h1>
+
+    <div class="byline">Consumer Advisory Desk · 3 min read · Updated April 2026</div>
+
+    <p>Timeshares are sold as a way to guarantee affordable vacations for life. But for millions of owners, the reality looks very different.</p>
+
+    <p><strong>What was supposed to be a benefit has become a burden.</strong></p>
+
+    <!-- STATS -->
+    <div class="stat-strip">
+      <div class="stat-box">
+        <div class="sb-num">9.6M</div>
+        <div class="sb-label">U.S. Households Own Timeshares</div>
+      </div>
+      <div class="stat-box">
+        <div class="sb-num">85%</div>
+        <div class="sb-label">Of Owners Regret Their Purchase</div>
+      </div>
+      <div class="stat-box">
+        <div class="sb-num">95%+</div>
+        <div class="sb-label">Stonegate Success Rate</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- REASON 1 -->
+    <h2 class="section-head">1. Maintenance Fees That Never Stop Climbing</h2>
+
+    <p>What starts as a few hundred dollars a year often grows into thousands. Fees increase almost every year, and for many families, the stress of watching bills rise faster than their vacation enjoyment makes ownership feel impossible to justify.</p>
+
+    <p><strong>Over time, the burden overshadows any benefit the timeshare once promised.</strong></p>
+
+    <!-- REASON 2 -->
+    <h2 class="section-head">2. A "Vacation Plan" You Can't Actually Use</h2>
+
+    <p>Blackout dates. Strict booking rules. Lack of availability. Owners often realise they're paying year after year for vacations they can't even take.</p>
+
+    <p>What was sold as guaranteed flexibility becomes a source of <strong>stress and disappointment</strong>.</p>
+
+    <!-- REASON 3 -->
+    <h2 class="section-head">3. Surprise Bills You Never Saw Coming</h2>
+
+    <p>When resorts need repairs or renovations, owners get billed through special assessments. These unexpected charges can be hundreds — or even <strong>thousands</strong> — of dollars, with no warning.</p>
+
+    <p>For many owners, these surprise bills are the final straw.</p>
+
+    <div class="red-flags">
+      <div class="rf-title">Does This Sound Like You?</div>
+      <ul>
+        <li><strong>Fees climbing every year</strong> with no cap in sight</li>
+        <li>Paying for a timeshare you <strong>haven't used in years</strong></li>
+        <li>Hit with <strong>special assessments</strong> you didn't expect</li>
+        <li>Unable to sell it — even for <strong>$1</strong></li>
+        <li>Worried your <strong>children will inherit</strong> the contract</li>
+      </ul>
+    </div>
+
+    <!-- FIRST CTA -->
+    <div class="alert-box">
+      <div class="ab-head">⚠️ Consumer Advisory — April 2026</div>
+      <p>Qualifying timeshare contracts may be eligible for <strong>permanent legal cancellation</strong> through an attorney-led process. A free eligibility check takes less than 3 minutes.</p>
+    </div>
+
+    <a href="#CTA_LINK" class="inline-cta cta-link">CHECK IF YOUR CONTRACT QUALIFIES →</a>
+
+    <!-- REASON 4 -->
+    <h2 class="section-head">4. A Property Worth Less Than a Cup of Coffee</h2>
+
+    <p>Timeshares rarely hold their value. Many are listed on resale sites for as little as <strong>one dollar</strong> — with no buyers.</p>
+
+    <p>Instead of being an appreciating asset, a timeshare becomes a long-term liability. Families realise too late that what they thought was a valuable purchase has <strong>no true market demand</strong>.</p>
+
+    <!-- REASON 5 -->
+    <h2 class="section-head">5. Contracts That Last a Lifetime — And Beyond</h2>
+
+    <p>Some timeshare contracts are written to last forever, with no natural end date. That means owners could be responsible for rising fees for life.</p>
+
+    <p><strong>And in some cases, the burden can be passed down to their children.</strong></p>
+
+    <p>What once seemed like a vacation plan becomes a generational financial strain.</p>
+
+    <!-- CANCELLED CONTRACT IMAGE -->
+    <div class="ba-image" style="margin:28px 0;">
+      <img src="img-contract-cancelled.png" alt="Timeshare contract cancelled" loading="lazy">
+    </div>
+
+    <hr class="divider">
+
+    <!-- STONEGATE SOLUTION -->
+    <h2 class="section-head">How Stonegate Firm Helps Owners Exit — For Good</h2>
+
+    <p>Stonegate Firm is the <strong>#1 consumer contract exit company</strong>, backed by co-branded law firm Stonegate Law, LLC. Their proven exit programs are designed to remove the burden, stop the financial strain, and restore your peace of mind.</p>
+
+    <div class="warning-box">
+      <div class="wb-title" style="color:#4CAF50;">✓ What You Get With Stonegate</div>
+      <ul>
+        <li><strong>Permanent cancellation</strong> — your contract is cancelled fully and legally, not just paused</li>
+        <li><strong>Freedom from rising fees</strong> — no more watching costs climb faster than your budget</li>
+        <li><strong>Contracts that end with you</strong> — protect your children from inheriting unwanted obligations</li>
+        <li><strong>Financial control restored</strong> — put your hard-earned money toward what actually matters</li>
+      </ul>
+    </div>
+
+    <!-- STONEGATE REVIEW -->
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Stonegate Firm came highly recommended by my cousin, and now I see why. I was nervous to trust anyone, but they were straightforward, patient, and successful. I cried from relief when I got my cancellation."</p>
+      <div class="t-author">— Janet A.</div>
+      <div class="t-brand">Stonegate Firm, LLC · BBB Verified</div>
+    </div>
+
+    <a href="#CTA_LINK" class="inline-cta cta-link">SEE IF YOU QUALIFY FOR CANCELLATION →</a>
+
+    <!-- REVIEW CAROUSEL -->
+    <div class="review-carousel-section">
+      <div class="rc-header">
+        <div class="rc-brand">STONEGATE FIRM</div>
+        <div class="rc-rating">★★★★★ <span>4.9/5</span> · A+ BBB Rated</div>
+      </div>
+      <div class="rc-track-wrapper">
+        <div class="rc-track">
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate Firm made a complicated situation simple. I'm thankful they helped my family escape a timeshare that no longer made sense."</p>
+            <div class="rc-author">— Robin C.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"This is an amazing law firm. Helped us get out of our timeshare in months. The best. Highly recommended."</p>
+            <div class="rc-author">— Ashley D.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"What a pleasure to work with Stonegate. They cancelled my timeshare in just over two months."</p>
+            <div class="rc-author">— Tim & Kathy P.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"I cannot recommend Stonegate enough! Got us out of a Marriott Vacation Club. Worth every dime!"</p>
+            <div class="rc-author">— Fred & Suzanne D.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate Firm delivered exactly what they promised. I'm finally free — and incredibly thankful."</p>
+            <div class="rc-author">— LV Thomas</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"As retirees, we didn't want to keep paying thousands for a spot we never used. Stonegate walked us through it with kindness."</p>
+            <div class="rc-author">— Sally L.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate did an amazing job leading my way out from an inherited timeshare. The financial burden was too much."</p>
+            <div class="rc-author">— Orozco H.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"I saw the ad for Stonegate online and called. My experience from beginning to end was great. I'm finally free."</p>
+            <div class="rc-author">— Carol M.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate Firm came highly recommended. They were straightforward, patient, and successful. I cried from relief."</p>
+            <div class="rc-author">— Janet A.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"The Stonegate Firm completed the task within 8 months. Definitely worth the effort. I highly suggest them."</p>
+            <div class="rc-author">— Maria J.</div>
+          </div>
+          <!-- Duplicate set for infinite scroll -->
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate Firm made a complicated situation simple. I'm thankful they helped my family escape a timeshare that no longer made sense."</p>
+            <div class="rc-author">— Robin C.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"This is an amazing law firm. Helped us get out of our timeshare in months. The best. Highly recommended."</p>
+            <div class="rc-author">— Ashley D.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"What a pleasure to work with Stonegate. They cancelled my timeshare in just over two months."</p>
+            <div class="rc-author">— Tim & Kathy P.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"I cannot recommend Stonegate enough! Got us out of a Marriott Vacation Club. Worth every dime!"</p>
+            <div class="rc-author">— Fred & Suzanne D.</div>
+          </div>
+          <div class="rc-card">
+            <div class="rc-stars">★★★★★</div>
+            <p>"Stonegate Firm delivered exactly what they promised. I'm finally free — and incredibly thankful."</p>
+            <div class="rc-author">— LV Thomas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- FINAL CTA -->
+    <h2 class="section-head">Take Back Control of Your Finances</h2>
+
+    <p>Year after year, payments drain money that could be spent elsewhere. Those who exit regain financial control and invest in what really matters.</p>
+
+    <p><strong>The relief of no longer carrying this financial weight allows owners to truly move forward.</strong></p>
+
+    <div class="cta-block">
+      <h3>Does Your Timeshare Contract Qualify for Legal Cancellation?</h3>
+      <a href="#CTA_LINK" class="cta-btn cta-link">CHECK MY ELIGIBILITY →</a>
+      <div class="cta-trust">
+        <span>🛡️ A+ BBB Accredited</span>
+        <span>⚖️ Stonegate Law, LLC</span>
+        <span>💰 100% Satisfaction Guarantee</span>
+      </div>
+      <div class="cta-timer">Your free consultation takes less than 3 minutes</div>
+    </div>
+
+  </article>
+
+  <div class="trust-bar">
+    <span>🛡️ A+ BBB Accredited</span>
+    <span>⚖️ Attorney-Led Process</span>
+    <span>💰 100% Satisfaction Guarantee</span>
+  </div>
+
+  <footer class="site-footer">
+    <p><strong>Advertorial Disclosure:</strong> This page is an advertorial and not an independent news article. The content above is sponsored by Stonegate Firm, LLC. Results vary based on individual contract terms, resort policies, and applicable law.</p>
+    <p>Stonegate Firm, LLC is an A+ BBB-rated timeshare exit firm that works with Stonegate Law, LLC to provide attorney-led timeshare cancellation services.</p>
+    <p>This site is not affiliated with any government agency. <em>No Government Affiliation.</em></p>
+    <p>© 2026 Consumer Advisory Report. All rights reserved.</p>
+  </footer>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta" id="stickyCTA">
+    <div class="sticky-inner">
+      <div class="st-text">Does Your Timeshare Qualify?</div>
+      <a href="#CTA_LINK" class="st-btn cta-link">CHECK MY ELIGIBILITY →</a>
+    </div>
+  </div>
+
+  <script>
+    // === Sticky CTA visibility ===
+    const sticky = document.getElementById('stickyCTA');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          sticky.classList.toggle('visible', window.scrollY > 600);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // === Dynamic click_id injection ===
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const clickId = params.get('click_id') || params.get('clickid') || params.get('sub1') || '';
+      const OFFER_URL = 'https://stonegate.trkafflnk.com/click';
+      document.querySelectorAll('.cta-link').forEach(el => {
+        el.href = clickId ? OFFER_URL + '?click_id=' + encodeURIComponent(clickId) : OFFER_URL;
+      });
+    })();
+  </script>
+
+</body>
+</html>
