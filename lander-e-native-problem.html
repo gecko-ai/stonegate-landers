@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waitlist - Timeshare Contract Cancellation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1a202c;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+  }
+  .page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); border-top: 5px solid #2c5f6e;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    border-bottom: 2px solid #2c5f6e;
+    background-color: #fff;
+    position: relative;
+  }
+  .logo {
+    height: 70px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+  .header-tag {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .content {
+    padding: 30px 24px;
+  }
+  .pre-headline {
+    font-size: 1.1rem;
+    color: #e53e3e;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+  .article-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .hero-img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 24px auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+  }
+  .text-body {
+    font-size: 1.15rem;
+    color: #2d3748;
+    margin-bottom: 24px;
+  }
+  .text-body a {
+    color: #3182ce;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .section-h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #2c5f6e;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 8px;
+  }
+  .criteria-list {
+    background: #f7fafc;
+    padding: 20px 24px;
+    border-left: 4px solid #2b6cb0;
+    margin-bottom: 24px;
+  }
+  .criteria-list ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+  .criteria-list li { margin-bottom: 8px; }
+  
+  .how-to-section {
+    background: #ebf8ff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 32px;
+  }
+  .how-to-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .steps-list {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .steps-list li { margin-bottom: 12px; }
+  
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .action-btn {
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: #3182ce;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    flex: 1 1 30%;
+    min-width: 160px;
+    transition: background 0.2s;
+  }
+  .action-btn:hover { background-color: #2b6cb0; }
+  .final-cta {
+    display: block;
+    width: 100%;
+    padding: 18px 24px;
+    background-color: #e53e3e;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 16px;
+    text-transform: uppercase;
+  }
+  .final-cta:hover { background-color: #c53030; }
+
+  .footer {
+    background: #edf2f7;
+    color: #718096;
+    padding: 30px 24px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  .footer a {
+    color: #4a5568;
+    text-decoration: none;
+  }
+  .footer p { margin-bottom: 10px; }
+
+  @media(max-width: 600px) {
+    .article-title { font-size: 2rem; }
+    .action-btn { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-container">
+  
+  <header class="header">
+    <img src="edited-photo (2).png" alt="Trusted Insurers" class="logo">
+    <span class="header-tag">Advertorial</span>
+  </header>
+
+  <div class="content">
+    <div class="pre-headline">Timeshare Owners With High Fees Need To Read This...</div>
+    <h1 class="article-title">Why Thousands of Owners Are Quietly Cancelling Their Timeshare Contracts This Month</h1>
+    
+    <img src="img-contract-cancelled.png" alt="Timeshare contract cancelled" class="hero-img">
+
+    <p class="text-body">A timeshare is sold as an effective way to secure luxury vacations for your family. With the right resort, it's pitched as an investment in your loved ones and their future.</p>
+    
+    <p class="text-body">But despite this, rising maintenance fees and special assessments have completely shattered that dream for many. Maintenance fees are currently rising by an average of 4–8% annually. In fact, many standard owners now pay well over $1,200 every single year for properties they rarely even use <sup>†</sup>.</p>
+
+    <h2 class="section-h2">Why Doesn't Everyone Just Cancel?</h2>
+    
+    <p class="text-body">The fact is, many owners think they are legally bound for life, or they incorrectly assume that fighting a resort developer will result in thousands of dollars in legal fees. But recent shifts in regulatory pressure and consumer protection laws have brought about big changes in the industry—and for the better.</p>
+
+    <p class="text-body">There are now highly specialised attorney-led networks set up to cater specifically to <a href="https://trk.trusted-insurers.com/cf/click">people exhausted by timeshare fees</a>. These qualified firms handle the resort directly, securing legally binding cancellations that permanently end the contract.</p>
+
+    <div class="criteria-list">
+      <p style="margin-bottom:12px;font-weight:700;font-size:1.15rem;">If you match the following criteria, you could be eligible to completely void your contract:</p>
+      <ul>
+        <li>You currently own a timeshare (US/UK residents)</li>
+        <li>Your maintenance fees have increased since purchase</li>
+        <li>You feel you were misled during the sales presentation</li>
+      </ul>
+    </div>
+
+    <p class="text-body">Request a free eligibility check today and find out if you qualify to stop the endless cycle of fees.</p>
+
+    <!-- CTA SECTION -->
+    <div class="how-to-section">
+      <h3>Here's How You Qualify</h3>
+      <ul class="steps-list">
+        <li>Step 1: Select the age of your timeshare below.</li>
+        <li>Step 2: Answer a few quick questions (takes approx 2 mins) to find out if your resort contract is eligible for cancellation.</li>
+      </ul>
+      
+      <p style="text-align:center; font-weight:700; margin-bottom:12px; color:#2d3748;">How old is your timeshare?</p>
+      <div class="btn-group">
+        <a href="https://trk.trusted-insurers.com/cf/click" class="action-btn">Under 12 Months</a>
+        <a href="https://trk.trusted-insurers.com/cf/click" class="action-btn">1 to 5 Years</a>
+        <a href="https://trk.trusted-insurers.com/cf/click" class="action-btn">5+ Years</a>
+      </div>
+
+      <a href="https://trk.trusted-insurers.com/cf/click" class="final-cta">Start Eligibility Check</a>
+    </div>
+
+  </div> <!-- end content -->
+
+  <footer class="footer">
+    <p>Advertorial<br>
+    THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG OR CONSUMER PROTECTION UPDATE.<br>
+    Trusted Insurers acts as a marketing publisher hosting promotional activity for third-party attorney networks and exit firms.</p>
+    
+    <p><sup>†</sup> Source: ARDA State of the Industry Report</p>
+    
+    <p>
+      <a href="https://trk.trusted-insurers.com/cf/click">Privacy Policy</a> | 
+      <a href="https://trk.trusted-insurers.com/cf/click">Terms & Conditions</a> | 
+      <a href="https://trk.trusted-insurers.com/cf/click">Contact Us</a>
+    </p>
+    <p style="margin-top: 10px;">© 2026 Trusted Insurers. All Rights Reserved.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
