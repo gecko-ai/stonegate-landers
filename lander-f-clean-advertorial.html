@@ -559,7 +559,7 @@
         
         function decreaseSpots() {
           if (currentSpots > 4) {
-            currentSpots -= Math.floor(Math.random() * 2) + 1;
+            currentSpots -= 1;
             spotsElement.textContent = currentSpots;
             
             // Pop effect
@@ -570,10 +570,10 @@
               spotsElement.style.color = 'var(--color-accent)';
             }, 300);
           }
-          const nextTime = Math.floor(Math.random() * 30000) + 15000;
+          const nextTime = Math.floor(Math.random() * 10000) + 30000;
           setTimeout(decreaseSpots, nextTime);
         }
-        setTimeout(decreaseSpots, 8000); // starts after 8 seconds
+        setTimeout(decreaseSpots, Math.floor(Math.random() * 10000) + 30000); // starts after 30-40 seconds
       }
 
       // 3. Dynamic Date Logic (April, 2026)
